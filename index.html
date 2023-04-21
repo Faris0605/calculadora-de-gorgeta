@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorgeta</title>
+</head>
+<body>
+    <!-- .boxMain -->
+    <div class="boxMain">
+        <!-- .boxRight -->
+        <div class="boxLeft">
+            <p>Bill</p>
+            <input type="number" id="bill" oninput="bill()">
+            <div class="select">
+                <button onclick="cinco()">5%</button>
+                <button onclick="dez()">10%</button>
+                <button onclick="quinze()">15%</button>
+                <button onclick="vinteCinco()">25%</button>
+                <button onclick="cinquenta()">50%</button>
+                <input type="number" placeholder="Custom" oninput="custom()" id="custom">
+            </div>
+            <input type="number" id="people" oninput="people()">
+            <b>Number of People</b>
+        </div>
+        <!-- .boxRight -->
+        <div class="boxRight">
+            <h2>$<span id="gorgeta">00</span></h2>
+            <br>
+            <h2>$<span id="total">00</span></h2>
+            <button onclick="reset()">RESET</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

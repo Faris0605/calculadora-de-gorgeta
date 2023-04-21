@@ -1,0 +1,282 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background:#dde6db;
+    height:100vh;
+    display:grid;
+    place-items:center;
+}
+/* .boxMain */
+.boxMain{
+    width:850px;
+    height:500px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 3px 5px rgb(194, 179, 179);
+    position:relative;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+/* .box */
+.boxRight,.boxLeft{
+    width:45%;
+    height:90%;
+}
+/* .boxRight */
+.boxRight{
+    background:#361542;
+    position:relative;
+    border-radius:8px;
+}
+.boxRight::before{
+    position:absolute;
+    background:#1e0825;
+    width:100%;
+    height:40%;
+    content:"";
+    border-radius:5px;
+    box-shadow:0 3px rgb(14, 4, 31);
+}
+.boxRight h2{
+    text-align:right;
+    font-size:45px;
+    margin:0 20px;
+    position:relative;
+    top:30px;
+    letter-spacing:1px;
+    color:white;
+    font-size:33px
+}
+.boxRight h2:nth-child(1)::before{
+    content:"Tip Amount";
+    position:absolute;
+    left:0;
+    font-size:15px;
+    top:50%;
+    transform:translatey(-50%);
+    color:white;
+}
+.boxRight h2:nth-child(3)::before{
+    content:"Total";
+    position:absolute;
+    left:0;;
+    font-size:15px;
+    color:white;
+    top:50%;
+    transform:translatey(-50%);
+}
+.boxRight h2::after{
+    position:absolute;
+    content:"/ persson";
+    left:0;
+    font-size:10px;
+    color:rgba(241, 227, 227, 0.521);
+    margin:20px 0;
+}
+.boxRight h2:nth-child(1)::after{
+    top:20px
+}
+.boxRight h2:nth-child(3)::after{
+    top:20px
+}
+.boxRight h2 span{
+    font-size:50px
+}
+.boxRight button{
+    position:absolute;
+    width:80%;
+    top:100%;
+    left:50%;
+    transform:translate(-50%,-100%);
+    margin:-20px 0;
+    height:35px;
+    border-radius:5px;
+    border:none;
+    color:rgba(14, 4, 31, 0.459);
+    background:rgba(194, 179, 179, 0.233);
+    transition:all linear 250ms;
+}
+.boxRight button:hover{
+    background:white;
+    color:black;
+}
+.boxRight button:active{
+    transform:translate(-50%,-100%) scale(0.9);
+}
+/* .boxLeft */
+.boxLeft{
+    background:whitesmoke;
+    border-radius:10px;
+    position:relative;
+}
+.boxLeft p{
+    position:relative;
+    left:40px;
+    letter-spacing:2px;
+    color:grey;
+    top:25px;
+    font-size:13px;
+    left:15px
+}
+.boxLeft p::before{
+    position:absolute;
+    content:"$";
+    top:35px;
+    left:10px;
+    font-size:15px;
+}
+/*#bill */
+.boxLeft #bill{
+    position:absolute;
+    height:45px;
+    width:93.5%;
+    left:50%;
+    transform:translatex(-50%);
+    border:none;
+    border-radius:5px;
+    top:45px;
+    text-align:right;
+    font-size:20px;
+    color:#361542;
+    padding:0 5px;
+    outline:none;
+    background:rgba(160, 152, 152, 0.233);
+}
+#bill:focus{
+    outline:2px #361542 solid;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* .select */
+.select{
+    position:absolute;
+    width:100%;
+    left:10px;
+    top:45%;
+    transform:translatey(-50%);
+}
+.select::before{
+    position:absolute;
+    content:"Select Tip %";
+    font-size:13px;
+    color:grey;
+    top:-20px;
+    letter-spacing: 1px;
+    left:5px
+}
+.select button{
+    display:inline-block;
+    width:30%;
+    height:45px;
+    margin:8px 2px;
+    font-size:18px;
+    color:white;
+    background: #361542;
+    border:none;
+    border-radius:5px;
+    transition:all linear 200ms
+}
+.select button:active{
+    transform:scale(0.8)
+}
+.select button:hover{
+    background:rgba(63, 16, 145, 0.719);
+}
+.select input{
+    position:absolute;
+    height:45px;
+    width:30%;
+    border:none;
+    background:rgba(194, 179, 179, 0.253) ;
+    margin:8px 6.5px;
+    border-radius:5px;
+    text-align: center;
+    font-size:20px;
+    letter-spacing: 1px;
+    outline:none
+}
+.select input[type=number]::placeholder{
+    text-align:center;
+}
+.select input[type=number]:hover::placeholder {
+    visibility: hidden;
+  }
+  .select input:focus{
+    outline:2px solid rgb(55, 8, 134)
+  }
+/* #peolpe */
+#people{
+    position:absolute;
+    width:93.5%;
+    height:45px;
+    top:100%;
+    left:50%;
+    border:none;
+    transform:translate(-50%,-100%);
+    background:rgba(194, 179, 179, 0.253);
+    border-radius:5px;
+    margin:-20px 0;
+    padding:0 5px;
+    font-size: 20px;
+    text-align:right;
+}
+#people:focus{
+    outline:2px #361542 solid;
+}
+.boxLeft b{
+    position:absolute;
+    top:100%;
+    transform:translate5(-100%);
+    margin:-85px 15px;
+    font-size: 13px;
+    color:grey;
+    letter-spacing:1px;
+}
+/* mobile */
+@media  only screen and (max-width:855px){
+    body{
+        display:inline-block;
+    }
+    .boxMain{
+        display:grid;
+        justify-content: center;
+        width:inherit;
+        height:initial;
+        transform:scale(0.9) translate(-50%,-55%);
+        padding:10px;
+        position:absolute;
+        left:50%;
+        top:50%;
+    }
+    .boxLeft{
+        height:350px;
+        width:400px;
+        background:none;
+    }
+    .boxLeft .select{
+        top:50%;
+        margin:10px 0
+    }
+    .boxRight{
+        height:300px;
+        width:400px;
+        top:0px;
+    }
+    .boxRight button{
+        height:50px;
+        font-size:25px;
+        letter-spacing:1px;
+        margin:-40px 0;
+    }
+    .boxRight::before{
+        height:55%;
+    }
+}
